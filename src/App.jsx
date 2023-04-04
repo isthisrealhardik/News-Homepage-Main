@@ -50,7 +50,7 @@ function App() {
 
 
   return (
-    <div className="text-main font-Inter w-screen h-full bg-off-white text-very-dark-blue pb-20 sm:px-[50px] md:px-[80px] lg:px-[120px]">
+    <div className="text-main font-Inter w-screen h-full bg-off-white text-very-dark-blue pb-20 lg:pb-10 sm:px-[50px] md:px-[80px] lg:px-[120px]">
       {/* NAVIGATION BAR */}
       {/* sm */}
       <nav className="w-screen flex justify-between items-center px-4 sm:w-full md:w-full pt-6 lg:hidden">
@@ -72,9 +72,9 @@ function App() {
         </div>
       </nav>
       {/* lg */}
-      <nav className="hidden lg:flex justify-between items-center pt-24 w-full">
-        <img className="w-24" src={logo} alt="Logo" />
-        <ul className="flex space-x-16 text-3xl text-dark-grayish-blue">
+      <nav className="hidden md:flex justify-between items-center pt-10 w-full">
+        <img className="w-14" src={logo} alt="Logo" />
+        <ul className="flex space-x-8 text-lg text-dark-grayish-blue">
           <li className="hover:text-soft-red transition" >Home</li>
           <li className="hover:text-soft-red transition" >New</li>
           <li className="hover:text-soft-red transition" >Popular</li>
@@ -91,20 +91,20 @@ function App() {
         <button className="bg-soft-red uppercase text-off-white rounded-none tracking-widest text-base font-normal flex items-center justify-center hover:bg-very-dark-blue pt-4 transition">Read more</button>
       </header>
       {/* lg */}
-      <header className="hidden lg:grid grid-cols-3 grid-rows-2 items-stretch gap-8 mt-20">
+      <header className="hidden lg:grid grid-cols-3 grid-rows-2 items-stretch gap-8 mt-8">
         <img className="w-full col-span-2 row-start-1 col-start-1 object-cover" src="/assets/images/image-web-3-desktop.jpg" alt="Web 3 Desktop" />
-        <h1 className="font-extrabold text-8xl pt-6 row-start-2 col-start-1">The Bright Future of Web 3.0</h1>
+        <h1 className="font-extrabold text-5xl leading-[60px] row-start-2 col-start-1">The Bright Future of Web 3.0</h1>
         <div className="col-start-2 row-start-2 flex flex-col items-start">
-          <p className="font-normal text-dark-grayish-blue text-2xl leading-8 py-6">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of people. But it is really fulfilling its promise?</p>
-          <button className="bg-soft-red uppercase mt-10 text-off-white rounded-none tracking-widest text-3xl font-normal flex items-center justify-center hover:bg-very-dark-blue pt-4 transition">Read more</button>
+          <p className="font-normal text-dark-grayish-blue text-base leading-6">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of people. But it is really fulfilling its promise?</p>
+          <button className="bg-soft-red uppercase mt-6 text-off-white rounded-none tracking-widest text-sm pb-4 font-normal flex items-center justify-center hover:bg-very-dark-blue pt-4 transition">Read more</button>
         </div>
         <section className="hidden lg:block bg-very-dark-blue text-off-white row-span-2 col-start-3 row-start-1">
-        <h1 className="text-soft-orange font-bold text-6xl pl-8 pt-8">New</h1>
+        <h1 className="text-soft-orange font-bold text-4xl pl-8 pt-8">New</h1>
         {
           newInfo.map(obj => (
-            <div key={obj.heading} className="px-8 py-4">
-              <h3 className="text-3xl font-bold pt-8 hover:text-soft-orange transition">{obj.heading}</h3>
-              <p className="text-off-white pt-4 opacity-50 text-2xl">{obj.paragraph}</p>
+            <div key={obj.heading} className="px-8 py-2">
+              <h3 className="text-xl font-bold pt-3 hover:text-soft-orange transition">{obj.heading}</h3>
+              <p className="text-off-white pt-2 opacity-50 text-base">{obj.paragraph}</p>
               <div className="h-[1px] bg-grayish-blue mt-6 opacity-50"></div>
             </div>
           ))
@@ -124,15 +124,15 @@ function App() {
           ))
         }
       </section>
-      <section className="mt-12 lg:flex justify-around items-center lg:mt-20">
+      <section className="mt-12 lg:flex justify-around items-center lg:mt-4">
         {
           news.map(obj => (
             <div key={obj.id} className="flex px-4 py-4 justify-center items-center">
-              <img className="w-36 h-36 lg:w-40 lg:h-44 lg:object-cover" src={obj.images} />
+              <img className="w-36 h-36 lg:w-36 lg:h-36 lg:object-cover" src={obj.images} />
               <div className="px-4 lg:ml-4 ">
-                <h1 className="text-grayish-blue font-bold text-5xl lg:text-5xl">{obj.id}</h1>
-                <h2 className="text-very-dark-blue text-xl lg:text-3xl lg:mt-4 font-extrabold hover:text-soft-red transition">{obj.heading}</h2>
-                <p className="text-dark-grayish-blue text-base lg:text-xl lg:mt-2">{obj.paragraph}</p>
+                <h1 className="text-grayish-blue font-bold text-5xl lg:text-xl">{obj.id}</h1>
+                <h2 className="text-very-dark-blue text-xl lg:text-lg font-extrabold hover:text-soft-red transition">{obj.heading}</h2>
+                <p className="text-dark-grayish-blue text-base lg:text-sm lg:mt-2">{obj.paragraph}</p>
               </div>
             </div>
           ))
