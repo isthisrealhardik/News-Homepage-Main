@@ -50,7 +50,7 @@ function App() {
 
 
   return (
-    <div className="text-main font-Inter w-screen h-full bg-off-white text-very-dark-blue pb-20 sm:px-[50px] md:px-[80px] lg:px-[450px]">
+    <div className="text-main font-Inter w-screen h-full bg-off-white text-very-dark-blue pb-20 sm:px-[50px] md:px-[80px] lg:px-[120px]">
       {/* NAVIGATION BAR */}
       {/* sm */}
       <nav className="w-screen flex justify-between items-center px-4 sm:w-full md:w-full pt-6 lg:hidden">
